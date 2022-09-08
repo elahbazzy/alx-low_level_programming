@@ -1,13 +1,11 @@
 #include <stdio.h>
 /**
- *
- * main - print the string in the put function
- * description -using the main function
- * This program prints programming is like building a multilingualpuzzle
- * returns 0
- */
+* main prints the string in the puts function
+* Description-Using the main function
+* Returns 0
+*/
 int main (void)
 { 
-	puts(*\"Programming is like building a multilingual puzzle")
-		returns(0);
+puts("\"Programming is like building a multilingual puzzle");
+return(0);
 }
