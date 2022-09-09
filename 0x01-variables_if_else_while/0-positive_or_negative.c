@@ -8,13 +8,14 @@
 
  * main - entry point
 
- * Description: prints  if a number is positive or negative.
+ * Description:uses the main function
+ * This program prints  if a number is positive or negative.
 
  * Return: 0
 
  */
 
-int main(void)
+int main (void)
 
 {
 
