@@ -6,8 +6,7 @@
 
 
 
-/**                                                                                                                             
-
+/**                                                                                                                            
                                                                                                                                 
 
  * main - entry point                                                                                                           
@@ -59,4 +58,4 @@ int main(void)
 		printf("%d  zero\n", n);
 
 	return (0);
-
+}
