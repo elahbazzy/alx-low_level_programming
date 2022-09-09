@@ -1,33 +1,18 @@
-#include <stdio.h>
-
 #include <stdlib.h>
 
 #include <time.h>
 
+#include <stdio.h>
 
+/**
 
-/**                                                                                                                            
-                                                                                                                                
+ * main - Prints random number to variable
 
- * main - entry point                                                                                                           
+ *
 
-                                                                                                                                
+ * Return: Always (Successful)
 
- * Description:uses the main function                                                                                           
-
- * This program prints  if a number is positive or negative.                                                                    
-
-                                                                                                                                
-
- * Return: 0                                                                                                                    
-
-                                                                                                                                
-
- */   
-
-
-
-
+ */
 
 int main(void)
 
@@ -35,7 +20,7 @@ int main(void)
 
 	int n;
 
-	char last[] = "last digit of";
+	char last[] = "Last digit of";
 
 
 
@@ -43,19 +28,35 @@ int main(void)
 
 	n = rand() - RAND_MAX / 2;
 
-	printf(%s %d is %d and is", last,n %20);
+	printf("%s %d is %d and is ", last, n, n % 10);
 
-	if (n %20> 5)
+	if (n % 10 > 5)
 
-		printf("%d greater than 5\n", n);
+	{
 
-	else if(n%20 < 0)
+		printf("greater than 5\n");
 
-		printf("%d less than 6 and not 0\n", n);
+	}
 
-	else 
+	else if (n % 10 == 0)
 
-		printf("%d  zero\n", n);
+	{
+
+		printf("0\n");
+
+	}
+
+	else
+
+	{
+
+		printf("less than 6 and not 0\n");
+
+	}
 
 	return (0);
+
+
+
 }
+
