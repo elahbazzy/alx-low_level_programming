@@ -21,7 +21,6 @@ int main(void)
 	int n;
 
 
-
 	srand(time(0));
 
 	n = rand() - RAND_MAX / 2;
@@ -42,7 +41,7 @@ int main(void)
 
 	}
 
-	else  (n < 0)
+	else if (n < 0)
 
 	{
 
@@ -51,4 +50,5 @@ int main(void)
 	}
 
 	return (0);
+}
 
