@@ -7,6 +7,7 @@ include "main.h"
  *
  * Return: pointer to byte in s that matches or NULL if no match
  */
+
 char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i, j;
@@ -21,8 +22,6 @@ char *_strpbrk(char *s, char *accept)
 
 		if (accept[j])
 			return (s + i);
-
 	}
-
 	return (0);
 }
