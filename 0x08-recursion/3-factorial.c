@@ -14,7 +14,7 @@ int factorial(int n)
 		return (-1);
 	else if (n == 0)
 		return (1);
-	real_factorial = factorial(n-1);
-		return (n* real_factorial);
+	real_factorial = factorial(n - 1);
+		return (n * real_factorial);
 
 }
