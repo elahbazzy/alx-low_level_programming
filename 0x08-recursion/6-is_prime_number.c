@@ -1,32 +1,38 @@
 #include "main.h"
 
 /**
- * is_prime_number: returns 1 if n is prime
- * @n number to be checked
- *
- * Return 1 if n is prime 0 otherwise
+ * is_prime - detects if an input number is a prime number
+ * @n: input number
+ * @c: iterator
+ * Return: 1 if n is a prime number. 0 if n is not a prime number
  */
-int is_prime_number(int n)
+
+int is_prime(unsigned int n, unsigned int c)
 {
-	int start = n / 2;
-	
-	if (n <= 1)
-		return(0);
-	return (is_prime(n , start));
+	if (n % c == 0)
+	{
+		if (n == c)
+			return (1);
+
+		else
+			return (0);
+	}
+	return (0 + is_prime(n, c + 1));
 }
 
 /**
- * _is_prime retuns the 1 if n is prime
- *@n number to be checked
- *@start the number to start checking from
- *
- *Return 1 if n is prime, 0 otherwise
+ * is_prime_number - detects if an input number is a prime number
+ * @n: input number
+ * Return: 1 if n is a prime number. 0 if n is not a prime number.
  */
 
-int is_prime(int n, int start)
+int is_prime_number(int n)
 {
-	if (start <= 1)
-		return (1);
-	else if (n % start == 0)
+	if (n == 0)
 		return (0);
-	return (is_prime(n , start - 1));
+	if (n < 0)
+		return (0);
+	if (n == 1)
+		return (0);
+	return (is_prime(n, 2));
+}
