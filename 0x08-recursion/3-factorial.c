@@ -9,16 +9,12 @@
 int factorial(int n)
 {
 
-	if (n > 0)
-	{
-		return (n * factorial(n - 1));
-	}
-	else if (n < 0)
-	{
+	int real_factorial;
+	if (n < 0)
 		return (-1);
-	}
-	else
-	{
+	else if (n == 0)
 		return (1);
-	}
+	real_factorial = factorial(n-1);
+		return (n* real_factorial);
+
 }
