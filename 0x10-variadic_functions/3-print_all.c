@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	int i = 0, j = 0;
 	char *separator = "";
-	printer_t funcs[] = {
+	printType funcs[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
@@ -92,13 +92,13 @@ void print_all(const char * const format, ...)
 	{
 		j = 0;
 
-		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
+		while (j < 4 && (*(format + i) != *(funcs[j].type)))
 			j++;
 
 		if (j < 4)
 		{
 			printf("%s", separator);
-			funcs[j].print(args);
+			funcs[j].printer(args);
 			separator = ", ";
 		}
 		i++;
